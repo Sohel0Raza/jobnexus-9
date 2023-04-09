@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "img":"https://static.vecteezy.com/system/resources/previews/000/600/113/original/technology-logo-icon-vectors.jpg",
+        "name": "Software Engineer",
+        "available_jobs": 1200
+    },
+    {
+        "id": 2,
+        "name": "Sales",
+        "img":"https://dcassetcdn.com/design_img/3381962/577133/577133_18533647_3381962_c5cce97d_image.jpg",
+        "available_jobs": 800
+    },
+    {
+        "id": 3,
+        "name": "Marketing",
+        "img":"https://cdn1.vectorstock.com/i/1000x1000/63/65/marketing-logo-design-vector-23546365.jpg",
+        "available_jobs": 600
+    },
+    {
+        "id": 4,
+        "name": "Finance",
+        "img":"https://static.vecteezy.com/system/resources/thumbnails/004/999/033/small/accountant-management-finance-logo-free-vector.jpg",
+        "available_jobs": 400
+    }
+]
