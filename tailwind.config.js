@@ -8,7 +8,7 @@ export default {
       {
         mytheme: {
 
-          "primary": "#ffbcd8",
+          "primary": "#312e81",
 
           "secondary": "#ddd6fe",
 
@@ -18,7 +18,7 @@ export default {
 
           "base-100": "#FFFFFF",
 
-          "info": "#94CCF4",
+          "info": "#a855f7",
 
           "success": "#73DEC9",
 

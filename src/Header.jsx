@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 const Header = () => {
     return (
-        <div className='flex justify-between md:px-20 py-3 items-center bg-sky-100 text-accent'>
+        <div className='flex justify-between md:px-20 py-3 items-center bg-secondary text-primary'>
             <div>
                 <h2 className='text-2xl font-bold'>Job Nexus</h2>
             </div>
@@ -20,7 +20,7 @@ const Header = () => {
                     isActive ? 'active' : 'default'
                 }>Blogs</NavLink>
             </div>
-            <button className="btn btn-success text-white hover:bg-sky-400">Start Applying</button>
+            <button className="btn btn-primary text-white hover:bg-sky-400">Start Applying</button>
         </div>
     );
 };

@@ -1,9 +1,10 @@
 import React from 'react';
+import HomeHeader from './HomeHeader';
 
 const Home = () => {
     return (
         <div>
-            <h3>this is home</h3>
+            <HomeHeader></HomeHeader>
         </div>
     );
 };
