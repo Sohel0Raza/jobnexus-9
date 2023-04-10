@@ -1,9 +1,10 @@
 import React from 'react';
-import { MapPinIcon, CurrencyDollarIcon} from '@heroicons/react/24/solid'
+import { MapPinIcon, CurrencyDollarIcon } from '@heroicons/react/24/solid'
+import { Link } from 'react-router-dom';
 
 
-const FeaturedJobs = ({ featuredJob,handleAddToJob }) => {
-    const {id, logo, name, company, job_type, job_time, location, salary } = featuredJob;
+const FeaturedJobs = ({ featuredJob}) => {
+    const { id, logo, name, company, job_type, job_time, location, salary } = featuredJob;
     return (
         <div className='border p-8 rounded-lg shadow-2xl'>
             <div className='h-28 w-28'>
@@ -20,7 +21,9 @@ const FeaturedJobs = ({ featuredJob,handleAddToJob }) => {
                     <CurrencyDollarIcon className='h-4 w-4 mr-1'></CurrencyDollarIcon>
                     <p>Salary: {salary}</p>
                 </div>
-                <button onClick={()=>handleAddToJob(id)} className='btn bg-gradient-to-r from-primary to-sky-500 py-1 text-white mt-3 hover:bg-secondary border-none'>View Details</button>
+                <Link to={`/jobDetails/${id}`}>
+                    <button className='btn bg-gradient-to-r from-primary to-sky-500 py-1 text-white mt-3 hover:bg-secondary border-none'>View Details</button>
+                </Link>
             </div>
         </div>
     );

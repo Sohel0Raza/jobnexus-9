@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRouteError } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const ErrorPage = () => {
     const { status, error, statusText } = useRouteError()
@@ -10,6 +11,9 @@ const ErrorPage = () => {
                 <h3 className='text-7xl font-bold'>{status || 404}</h3>
                 <p className='font-semibold'>Page {statusText || 'Not Found'}</p>
                 <p>{error?.message}</p>
+                <Link to="/">
+                   <button className='btn btn-secondary mt-3'> Back To Homepage</button>
+                </Link>
             </div>
 
         </div>
