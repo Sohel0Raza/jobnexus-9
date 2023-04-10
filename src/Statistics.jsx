@@ -1,5 +1,5 @@
 import React from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 const Statistics = () => {
     const assignmentMarks = [
@@ -19,7 +19,7 @@ const Statistics = () => {
                 <h2 className='text-2xl font-bold text-center p-4 md:my-10'>All Assignment Mark</h2>
             </div>
             <div className='md:w-9/12 mx-auto p-4'>
-            <BarChart 
+            <AreaChart 
             width={800}
             height={400}
             data={assignmentMarks}
@@ -27,9 +27,8 @@ const Statistics = () => {
                 <XAxis dataKey="id"></XAxis>
                 <YAxis></YAxis>
                 <Tooltip/>
-                <Legend></Legend>
-                <Bar type="monotone" stroke="#8884d8" fill="#8884d8" dataKey="mark"/>
-            </BarChart>
+                <Area type="monotone" stroke="#8884d8" fill="#8884d8" dataKey="mark"/>
+            </AreaChart>
         </div>
         </div>
     );

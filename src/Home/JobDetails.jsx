@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import { addToDb } from '../../public/dataBase';
 const JobDetails = () => {
     const jobDetail = useLoaderData()
-    console.log('jobDetail :', jobDetail);
-    const { description, responsibility, education, experience, salary, name, phone, email, location } = jobDetail;
+    const {id, description, responsibility, education, experience, salary, name, phone, email, location } = jobDetail;
+    
     return (
         <div className='md:w-9/12 mx-auto'>
             <h2 className='text-3xl font-bold md:my-20 text-center'>Job Details</h2>
@@ -32,7 +33,7 @@ const JobDetails = () => {
                         </div>
                     </div>
                     <Link to="/appliedJobs">
-                        <button className='btn bg-gradient-to-r from-primary to-sky-500 py-1 text-white mt-3 hover:bg-secondary border-none w-full'>Apply Now</button>
+                        <button onClick={()=> addToDb(id)} className='btn bg-gradient-to-r from-primary to-sky-500 py-1 text-white mt-3 hover:bg-secondary border-none w-full'>Apply Now</button>
                     </Link>
                 </div>
             </div>

@@ -5,7 +5,11 @@ import { useLoaderData } from 'react-router-dom';
 import JobCategory from './JobCategorys';
 
 const Home = () => {
-    const featuredJobs = useLoaderData()
+    const allFeaturedJobs = useLoaderData()
+    const [featuredJobs, setFeaturedJobs] = useState({data:allFeaturedJobs.slice(0,4)})
+    const handleShowAll = () =>{
+        setFeaturedJobs({...allFeaturedJobs, data:allFeaturedJobs, isShowAll:true})
+    }
     return (
         <div>
             <HomeHeader></HomeHeader>
@@ -16,11 +20,14 @@ const Home = () => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 md:gap-8 md:w-10/12 mx-auto'>
                 {
-                    featuredJobs.slice(0,4).map(featuredJob => <FeaturedJobs
+                    featuredJobs.data.map(featuredJob => <FeaturedJobs
                     key={featuredJob.id}
                     featuredJob={featuredJob}
                     ></FeaturedJobs>)
                 }
+            </div>
+            <div className={`text-center my-6 ${featuredJobs.isShowAll ? 'hidden' : ''}`}>
+                <button onClick={handleShowAll} className='btn bg-primary text-white hover:bg-secondary border-none'>See More</button>
             </div>
         </div>
     );

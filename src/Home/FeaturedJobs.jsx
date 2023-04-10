@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 const FeaturedJobs = ({ featuredJob}) => {
     const { id, logo, name, company, job_type, job_time, location, salary } = featuredJob;
+    
     return (
         <div className='border p-8 rounded-lg shadow-2xl'>
             <div className='h-28 w-28'>
