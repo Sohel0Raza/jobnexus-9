@@ -1,8 +1,8 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
-
+import { Link, useLoaderData } from 'react-router-dom';
 const JobDetails = () => {
     const jobDetail = useLoaderData()
+    console.log('jobDetail :', jobDetail);
     const { description, responsibility, education, experience, salary, name, phone, email, location } = jobDetail;
     return (
         <div className='md:w-9/12 mx-auto'>
@@ -19,18 +19,21 @@ const JobDetails = () => {
                 <div className='md:ml-10'>
                     <div className='bg-slate-200 py-4 px-6 rounded-md'>
                         <h4 className='font-semibold text-xl mb-3'>Job Details</h4>
-                            <div className='space-y-2'>
+                        <div className='space-y-2'>
                             <p><span className='font-bold'>Salary</span>: {salary}</p>
-                        <p><span className='font-bold'>Job Title</span>: {name}</p>
-                            </div>
+                            <p><span className='font-bold'>Job Title</span>: {name}</p>
+                        </div>
                         <h4 className='font-semibold text-xl my-3'>Contact Information</h4>
                         <div className='space-y-2'>
-                        <p><span className='font-bold'>Phone</span>: {phone}</p>
-                        <p><span className='font-bold'>Email</span>: {email}</p>
-                        <p><span className='font-bold'>Address</span>: {location}</p>
+                            <p><span className='font-bold'>Phone</span>: {phone}</p>
+                            <p><span className='font-bold'>Email</span>: {email}</p>
+                            <p>
+                                <span className='font-bold'>Address</span>: {location}</p>
                         </div>
                     </div>
-                    <button className='btn bg-gradient-to-r from-primary to-sky-500 py-1 text-white mt-3 hover:bg-secondary border-none w-full'>Apply Now</button>
+                    <Link to="/appliedJobs">
+                        <button className='btn bg-gradient-to-r from-primary to-sky-500 py-1 text-white mt-3 hover:bg-secondary border-none w-full'>Apply Now</button>
+                    </Link>
                 </div>
             </div>
         </div>

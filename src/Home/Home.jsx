@@ -16,7 +16,7 @@ const Home = () => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 md:gap-8 md:w-10/12 mx-auto'>
                 {
-                    featuredJobs.map(featuredJob => <FeaturedJobs
+                    featuredJobs.slice(0,4).map(featuredJob => <FeaturedJobs
                     key={featuredJob.id}
                     featuredJob={featuredJob}
                     ></FeaturedJobs>)
