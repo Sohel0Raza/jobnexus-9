@@ -7,9 +7,9 @@ const JobDetails = () => {
     
     return (
         <div className='md:w-9/12 mx-auto'>
-            <h2 className='text-3xl font-bold md:my-20 text-center'>Job Details</h2>
+            <h2 className='text-3xl font-bold m-10 md:my-20 text-center'>Job Details</h2>
             <div className='md:flex md:my-10'>
-                <div className='space-y-4 md:w-1/2'>
+                <div className='space-y-4 md:w-1/2 p-6'>
                     <h4><span className='text-xl font-semibold'> Job Description:</span> <span>{description}</span></h4>
                     <h4><span className='text-xl font-semibold'> Job Responsibility:</span> <span>{responsibility}</span></h4>
                     <h4 className='text-xl font-semibold'> Education Requirements:</h4>
