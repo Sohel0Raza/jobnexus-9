@@ -3,7 +3,7 @@ import React from 'react';
 const Category = ({ job }) => {
     const { name, img, available_jobs } = job;
     return (
-        <div className='bg-slate-100 rounded-xl shadow-2xl'>
+        <div className='bg-slate-100 rounded-xl shadow-2xl m-7 md:m-0 '>
             <div className='h-24 w-24 mx-auto pt-5'>
                 <img className='w-full' src={img} alt="" />
             </div>
